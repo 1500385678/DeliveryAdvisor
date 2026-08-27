@@ -1,0 +1,53 @@
+# DeliveryWeb · .gitignore · 2026-08-28 补
+# 用途:屏蔽本地编辑器/系统噪声,避免污染 git 历史
+# 维护:T4 文档/结构任务,本顾问不主动 push .DS_Store 类文件
+
+# macOS 系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows 系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python(Phase 1+ 启用 md_to_json.py 等脚本)
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node(Phase 2+ 启用 React/Vite)
+node_modules/
+dist/
+build/
+.npm/
+.yarn/
+
+# 日志/临时
+*.log
+*.tmp
+*.bak
+*.orig
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# .plan/ 当日临时计划(commit 后删除,文件不入版本)
+.plan/*.md
+!.plan/.gitkeep

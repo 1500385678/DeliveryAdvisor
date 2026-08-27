@@ -21,8 +21,9 @@ DeliveryWeb/
 │   └── js/site.js         全站脚本入口(Phase 0 空,Phase 1+ 填充)
 ├── content/               Phase 1 起,放按章节组织的 markdown
 │                            (01_交付起源与演变 / 02_... / 10_...)
-├── .plan/                 每日增量计划(T4 产物,YYYYMMDD.md)
+├── .plan/                 每日增量计划(T4 产物,YYYYMMDD.md · commit 后删除)
 ├── .Log/                  每日巡检报告(T5 产物,巡检-交付-YYYYMMDD.md)
+├── .gitignore             屏蔽 .DS_Store / __pycache__ / node_modules 等本地噪声(2026-08-28 补)
 └── 交付顾问开发架构与计划.md  T1 主计划(已落盘 2026-08-25 · 内含 Phase 0-4 任务清单 / 数据架构 / 成本估算)
 ```
 
@@ -115,6 +116,7 @@ python3 -m http.server 8000
 
 ## 变更记录
 
+- 2026-08-28 · 新增 `.gitignore` 屏蔽 macOS / 编辑器 / Python / Node 噪声 + `.plan/.gitkeep` 占位 + 撤销 `.plan/.DS_Store` 跟踪;目录约定同步增列 `.gitignore` 行 · T4 优化
 - 2026-08-27 · README 补"开发节奏(cron 双链路)"小章节,记录 02:10 巡检 + 03:10 开发的 cron 任务链路 / T1-T5 命名 / 双仓推送流程,与"巡检制度"对应 · T4 优化
 - 2026-08-26 · README 同步 T1 命名(`交付顾问开发架构与计划.md`)+ 补 10 章节速查表 · 清理 working tree(落盘存档 T1 主计划 + 今日巡检)· T4 优化
 - 2026-08-25 · README 补"巡检制度"章节,正式入档 02:10 巡检 / `.Log/` 机制 · T4 增量
