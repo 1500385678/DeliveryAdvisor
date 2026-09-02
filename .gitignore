@@ -42,6 +42,11 @@ build/
 *.tmp
 *.bak
 *.orig
+# 白名单:macOS 大小写不敏感下 `*.log` 会把 `.Log/` 目录本身也匹配掉
+#(导致 .Log/*.md 巡检报告无法用 `git add -A` 常规添加,需 inspect 脚本用 `git add -f` 强制)
+# 此处显式 re-include 让 .Log/ 目录及 .md 巡检报告可正常入库
+!.Log/
+!.Log/*.md
 
 # 环境变量
 .env
